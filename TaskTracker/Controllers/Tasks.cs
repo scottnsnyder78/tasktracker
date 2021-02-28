@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using AutoFixture;
 using Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -12,10 +14,17 @@ namespace TaskTracker.Controllers
     public class TasksController :  ControllerBase
     {
         [HttpGet]
-        public IEnumerable<Tasks> Get()
+        public WorkTasks Get()
         {
             var fixture = new Fixture();
-            return fixture.Create<IEnumerable<Tasks>>();
+            var tasks = fixture.Build<WorkTasks>().With(t => t.GetTitle(), "a").Create();
+            var results = new List<ValidationResult>();
+            bool isValid = Validator.TryValidateObject(
+                tasks,
+                new ValidationContext(tasks, null, null),
+                results,
+                false);
+            return tasks;
         }
     }
 }
