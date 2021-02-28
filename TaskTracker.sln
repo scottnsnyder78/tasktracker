@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTracker", "TaskTracker\TaskTracker.csproj", "{B241D89A-CE69-4217-8CBD-EA57491DD7BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{921B5E7F-31A7-49D1-9875-CCDC3825324F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{048B9A7B-FE77-4C4C-B830-C9F520BAD604}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E6D312F7-027D-4AA1-A6AD-3E182647B26B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,13 @@ Global
 		{B241D89A-CE69-4217-8CBD-EA57491DD7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B241D89A-CE69-4217-8CBD-EA57491DD7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B241D89A-CE69-4217-8CBD-EA57491DD7BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{921B5E7F-31A7-49D1-9875-CCDC3825324F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{921B5E7F-31A7-49D1-9875-CCDC3825324F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{921B5E7F-31A7-49D1-9875-CCDC3825324F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{921B5E7F-31A7-49D1-9875-CCDC3825324F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{921B5E7F-31A7-49D1-9875-CCDC3825324F} = {048B9A7B-FE77-4C4C-B830-C9F520BAD604}
+		{B241D89A-CE69-4217-8CBD-EA57491DD7BF} = {E6D312F7-027D-4AA1-A6AD-3E182647B26B}
 	EndGlobalSection
 EndGlobal
